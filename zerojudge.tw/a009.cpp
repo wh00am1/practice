@@ -1,22 +1,13 @@
-#include <iostream>
-#include <string>
-#include <stdlib.h>
+#include<iostream>
 using namespace std;
 
-// ord('*') - ord('1') = -7
-
-int main(int argc, char **argv)
-{
-	char input[1000];
-	while (scanf("%s", input)){
-		for(int i=0; i < strlen(input); i++){
-			input[i] -= 7;
-			//cout << input << endl;
-			
-		}
-		cout << input << endl;
-	}
-	
-	return 0;
+int main(int argc, char const *argv[]) {
+    string i;
+    while (cin >> i) {
+        for (int j = 0 ; j < i.length() ; j++) {
+                cout << char(i[j]-7);
+        }
+        cout << endl;
+    }
+    return 0;
 }
-			
