@@ -73,7 +73,7 @@ void Stack::list(){
 int main(int argc, char const *argv[])
 {
 	Stack stk;
-	char opt;
+	int opt;
 
 	while(1){
 		printf("==========================================\n" );
