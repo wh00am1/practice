@@ -3,20 +3,27 @@
 
 using namespace std;
 
-int n, solve(int a);
+int n, solve(), dp[1000000], res, i=1;
 int main(int argc, char const *argv[])
 {
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
 	cin >> n;
-	int res = solve(n);
-	cout << res << endl;
+	solve();
 	return 0;
 }
 
-int solve(int a){
-	if(a == 1)
-		return 2;
-	else if(a == 2)
-		return 4;
-	else
-		return solve(a-1) + a;
+int solve(){
+	dp[0] = 1;
+	if(n == 0){
+		cout << dp[0] << endl;
+		return 0;
+	}
+	for(; i<=n; i++){
+		dp[i] = dp[i-1] + i;
+		res = dp[i];
+	}
+	cout << res << endl;
+	return 0;
 }
