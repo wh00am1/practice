@@ -5,10 +5,12 @@ using namespace std;
 
 int n, i, j;
 unsigned long long res;
-bool a[10000000];
+bool a[10000000] = {0};
 void solve(){
-	for(int q=0; q<10000000; q++)
-		a[q] = false;
+	/**
+	for(int x=0; x<10000000; x++)
+		a[x] = 0;
+		**/
 	while(n--){
 		cin >> i >> j;
 		for(int x=i; x<j; x++)
@@ -18,6 +20,7 @@ void solve(){
 		if(a[x])
 			res++;
 	}
+
 	cout << res << endl;
 
 }
