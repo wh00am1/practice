@@ -1,24 +1,22 @@
-#include <stdio.h>
-
-int n, m, temp, l;
+#include <iostream>
+#define endl "\n"
+using namespace std;
 
 int main(int argc, char const *argv[])
 {
 	//ios::sync_with_stdio(0);
-	//cin.tie(0);
+	cin.tie(0);
 
-	while(scanf("%d %d", &n, &m)){
-		int res;
-		l=0;
-			for(int i=n; i<m; i++){
-				scanf("%d", &temp);
-				l += temp;
-				if(l >= m){
-					res = i;
-					break;
-				}
+	int n, m;
+	while(cin >> n >> m){
+		int l=0, t=0;
+		while(t <= m){
+			t += n+l;
+			l++;
 		}
-		printf("%d\n", res);
+		if(l == 0)
+			l=1;
+		cout << l << endl;
 	}
 	return 0;
 }
