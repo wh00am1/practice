@@ -1,21 +1,27 @@
-#include <cstdio>
+#include <iostream>
 #include <vector>
-
 using namespace std;
 
+int n, m, k;
+vector<int> v;
+void solve(){
+	int p=0, ct=0;
+	for(int i=0; i<n; i++)
+		v.push_back(n);
+	while(ct != k-1){
+		p+=m;
+		p%=v.size();
+		v.erase(v.begin()+p);
+		ct+=1;
+	}
+	cout << (p+m)%v.size() << endl;
+}
 int main(int argc, char const *argv[])
 {
-	int n, m, k;
-	vector<int> people;
-	scanf("%d %d %d", &n, &m, &k);
-	for(int i=0; i<n; i++)
-		people.push_back(i);
-	int ct=0;
-	for(int i=0; i<k-1; i++){
-		ct = (ct+m-1) % people.size();
-		people.erase(people.begin()+ct);
-	}
-	ct = (ct+m-1) % people.size();
-	printf("%d\n", people[ct]);
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
+	while(cin >> n >> m >> k)
+		solve();
 	return 0;
 }
