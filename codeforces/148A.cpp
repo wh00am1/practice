@@ -17,6 +17,14 @@ void AkagiMyWife(){
 }
 int main(int argc, char const *argv[]){
 	AkagiMyWife();
-    
+    int k, l, m, n, d;
+    cin >> k >> l >> m >> n >> d;
+    int s=0;
+    FOR(i, d){
+        int j=i+1;
+        if(j%k&&j%l&&j%m&&j%n)
+            ++s;
+    }
+    cout << d-s << endl[1];
 	return 0;
 }
