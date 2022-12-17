@@ -1,6 +1,6 @@
 # practice
 
-## vimrc
+## vimrc(抄來的)
 ```vim
 au GUIEnter * simalt ~x
 
