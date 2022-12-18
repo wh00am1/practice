@@ -3,7 +3,6 @@
 #pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
 #define ll long long
 #define ld long double
-#define endl " \n"
 #define FOR(a, b) for(ll (a)=0; (a)<(ll)(b); ++(a))
 #define EACH(u, v) for(auto& u : v)
 
