@@ -15,6 +15,15 @@ void AkagiMyWife(){
 	cin.tie(0);
 }
 int main(int argc, char const *argv[]){
-	AkagiMyWife();	
+	AkagiMyWife();
+	int n, k, ans=0;
+	cin >> n >> k;
+	k=240-k;
+	for(int i=1; i<n+1; ++i){
+			int j=5*i*(i+1)/2;
+			if(j>k) break;
+			++ans;
+	}
+	cout << ans << '\n';
 	return 0;
 }

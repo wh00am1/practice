@@ -15,6 +15,11 @@ void AkagiMyWife(){
 	cin.tie(0);
 }
 int main(int argc, char const *argv[]){
-	AkagiMyWife();	
+	AkagiMyWife();
+	int a, b, s1, s2;
+	cin >> a >> b;
+	s1=min(a, b);
+	s2=(max(a, b)-s1)/2;
+	cout << s1 << ' ' << s2 << '\n';
 	return 0;
 }
