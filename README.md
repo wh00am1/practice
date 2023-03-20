@@ -8,29 +8,32 @@ set enc=utf-8
 set fenc=utf-8
 set termencoding=utf-8
 set nocompatible
-set autoindent
+set cindent
 set smartindent
-set tabstop=4             
+set noexpandtab
+set tabstop=4     
+set shiftwidth=4        
 set textwidth=120
 set t_Co=256
 syntax on
 set showmatch
-colorscheme desert
-set background=dark
-set gfn=PxPlus_IBM_VGA_8x16:h20
+colorscheme default
+set background=light
+set gfn=Cascadia_Code:h16
 set backspace=indent,eol,start
 set noundofile
 set nobackup       
 set nowritebackup  
 set noswapfile     
-cd C:\Workspace\practice
+cd C:\Workspace
+
 inoremap {<CR> {<CR>}<Esc>O
 inoremap {{ {
 inoremap {} {}
 autocmd filetype cpp nnoremap <F5> :w <bar> !g++ -std=c++14 % -o %:r -Wl,--stack,268435456<CR>
 autocmd filetype cpp nnoremap <F6> :!%:r<CR>
-autocmd filetype cpp nnoremap <C-C> :s/^\(\s*\)/\1\/\/<CR> :s/^\(\s*\)\/\/\/\//\1<CR> $
-map <F9> :! python % <CR>
+autocmd filetype r nnoremap <F6> :w <bar> !Rscript %:r.r <CR> 
+map <F6> :w <bar> !python % <CR>
 set nu
 augroup numbertoggle
     autocmd!
@@ -45,4 +48,9 @@ function! HasPaste()
     endif
     return ''
 endfunction
+
+call plug#begin()
+
+
+call plug#end()
 ```
